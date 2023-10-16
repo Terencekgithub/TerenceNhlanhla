@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "TERENCE KAMOGELO MOABI 221716971"
-echo "NHLANHLA MAKOFANE"
+echo "NHLANHLA MAKOFANE 221920234"
 
 echo "CHECK IF NGINX IS INSTALLED ON THE WEB SERVER"
 systemctl is-active nginx
@@ -27,16 +27,6 @@ touch index.html
 
 echo "ADDING INFORMATION TO THE INEDX.HTML FILE"
 nano index.html
-<!DOCTYPE html>
-<html>
-<body>
-<h1>STUDENT INFORMATION PAGE</h1>
-<p>INITIALS: TKM AND NVM <br>
-   NAME: TERENCE MOABI AND NHLANHLA MAKOFANE <br>
-   STUDENT NO: 221716971 AND 221920234 <br>
-   COURSE: COMPUTER SYSTEMS
-</p>
-</body>
-</html>
+
 
 

@@ -1,3 +1,4 @@
+#!/bin/bash
 
 echo "Access MySQL using the root user"
 mysql -u root -p

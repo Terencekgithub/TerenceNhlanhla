@@ -15,7 +15,7 @@ mkdir /var/www/html/labs
 ls -ld /var/www/html/labs
 
 echo "CHANGE OWNERSHIP OF DIRECTORY TO CURRENT USER"
-chown terencenhlanhla:root /var/www/html/labs
+chown practice:root /var/www/html/labs
 
 echo "CREATE A SYMBOLIC LINK CALLED HTML UNDER HOME DIRECTORY"
 ln -s /var/www/html/labs html

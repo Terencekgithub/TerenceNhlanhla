@@ -15,4 +15,52 @@ sudo chmod +x script.sh
 sudo ./script.sh
 https://github.com/Terencekgithub/TerenceNhlanhla/blob/main/labs/nginx.sh
 
+#!/bin/bash
+
+# Task 1: Deploying Linux Web Server on Azure
+# You'll need to replace placeholders like <your_vm_name>, <your_resource_group>, etc., with your actual values.
+
+az vm create --resource-group <your_resource_group> \
+  --name <your_vm_name> \
+  --image <your_linux_image> \
+  --admin-username <your_username> \
+  --generate-ssh-keys
+
+# Task 2: Installing and Configuring NGINX
+# Connect to the VM using SSH
+ssh <your_username>@<your_vm_public_ip>
+
+# Install NGINX
+sudo apt-get update
+sudo apt-get install -y nginx
+
+# Create a directory and a basic webpage
+sudo mkdir /var/www/html/labs
+sudo chown -R $USER /var/www/html/labs
+ln -s /var/www/html/labs ~/html
+echo "Hello from NGINX on Azure!" > ~/html/index.html
+
+# Task 3: Setting Up MySQL Database
+# Install MySQL (if not already installed)
+sudo apt-get install -y mysql-server
+
+# Secure the MySQL installation
+sudo mysql_secure_installation
+
+# Create a database and user for your student information system
+mysql -u root -p -e "CREATE DATABASE students;"
+mysql -u root -p -e "CREATE USER 'student'@'localhost' IDENTIFIED BY '<your_password>';"
+mysql -u root -p -e "GRANT ALL PRIVILEGES ON students.* TO 'student'@'localhost';"
+mysql -u root -p -e "FLUSH PRIVILEGES;"
+
+# Configure MySQL to allow remote access if needed
+# Modify the MySQL configuration file to bind to your VM's private IP or 0.0.0.0 (not recommended for production).
+
+# Restart MySQL to apply the changes
+sudo service mysql restart
+
+# Exit the SSH session
+exit
+
+
 

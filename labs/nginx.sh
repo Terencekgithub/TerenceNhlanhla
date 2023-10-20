@@ -15,10 +15,10 @@ mkdir /var/www/html/labs
 ls -ld /var/www/html/labs
 
 echo "CHANGE OWNERSHIP OF DIRECTORY TO CURRENT USER"
-chown practice:root /var/www/html/labs
+chown terencenhlanhla:root /var/www/html/labs
 
 echo "CREATE A SYMBOLIC LINK CALLED HTML UNDER HOME DIRECTORY"
-ln -s /var/www/html/labs html
+ln -s /var/www/html/labs ~/html
 ls -l
 
 echo "CREATE AN INDEX.html FILE"

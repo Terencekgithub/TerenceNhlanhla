@@ -35,15 +35,15 @@ echo "Use the student_records database"
 USE studentsManagement;
 
 echo "Create the students table"
-CREATE TABLE students (
+CREATE TABLE studentInfo (
     student_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
     age INT,
     gender ENUM('Male','Female', 'Other'),
-    course VARCHAR(255),);
+    course VARCHAR(255));
 
 echo "Insert sample data into the students table"
-INSERT INTO students (name, age, gender, course) VALUES
+INSERT INTO studentInfo (name, age, gender, course) VALUES
 ('Terence Moabi', 21, 'Male', 'Computer Systems'),
 ('Nhlanhla Makofane', 20, 'Male', 'Computer Systems'),
 ('Thendo Mabhara', 23, 'Male', 'Marketing'),
@@ -52,6 +52,6 @@ INSERT INTO students (name, age, gender, course) VALUES
 ('Zwonaka Mukwevho', 24, 'Female', 'Industrial Engineering');
 
 echo "View Data"
-SELECT * FROM students;
+SELECT * FROM studentInfo;
 
 

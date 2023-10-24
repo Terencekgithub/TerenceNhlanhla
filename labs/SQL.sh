@@ -40,15 +40,14 @@ CREATE TABLE students (
     name VARCHAR(255),
     age INT,
     gender ENUM('Male','Female', 'Other'),
-    course VARCHAR(255),
-);
+    course VARCHAR(255),);
 
 echo "Insert sample data into the students table"
 INSERT INTO students (name, age, gender, course) VALUES
 ('Terence Moabi', 21, 'Male', 'Computer Systems'),
-('Nhlanhla Makofane', 20, 'Male', 'Computer Systems');
+('Nhlanhla Makofane', 20, 'Male', 'Computer Systems'),
 ('Thendo Mabhara', 23, 'Male', 'Marketing'),
-('Jacob Nkosi', 21, 'Male', 'Marketing');
+('Jacob Nkosi', 21, 'Male', 'Marketing'),
 ('Lerato Gumede', 25, 'Female', 'Photography'),
 ('Zwonaka Mukwevho', 24, 'Female', 'Industrial Engineering');
 

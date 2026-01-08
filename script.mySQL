@@ -1,12 +1,11 @@
 #!/bin/bash
 
-# Task 3: Setting Up MySQL Database
 echo "Install MySQL (if not already installed)"
 sudo apt-get install -y mysql-server
 
 echo "Secure the MySQL installation"
 sudo mysql_secure_installation --user root
-#Enter password
+
 sudo passwd
 su -
 
@@ -16,14 +15,13 @@ mysql -u root
 echo "Reset root password"
 mysql> FLUSH PRIVILEGES;
 mysql> use mysql;
-mysql> update user set plugin="mysql_native_passwd" where User='root';
-mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password';
+mysql> update user set plugin="!tkm@1911" where User='root';
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY !Tkm@1911';
 mysql> FLUSH PRIVILEGES;
 mysql> quit
 
 use sql
 
-#Task 4: Creating Student Table and Data
 echo "Login to mySQL Server"
 echo "Access MySQL using the root user"
 mysql -u root -p OR mysql -u root
